@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ username,btnText="visite me" }) {
+function Card({ username,btnText="visite me" ,title}) {
   console.log("props", username);
   return (
     <div className="relative h-[400px] w-[300px] rounded-md">
@@ -13,8 +13,7 @@ function Card({ username,btnText="visite me" }) {
       <div className="absolute bottom-4 left-4 text-left">
         <h1 className="text-lg font-semibold text-white">{username  }</h1>
         <p className="mt-2 text-sm text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-          debitis?
+       {title}
         </p>
         <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-dark">
          {btnText  } →
