@@ -28,11 +28,10 @@ function App() {
   }, [length, numberAllowed, charAllowed]);
 
   const copyPasswordToClipboard = useCallback(() => {
-    if (passwordRef.current) {
-      passwordRef.current.select();
-      document.execCommand("copy");
-    }
-  }, []);
+     passwordRef.current?.select();
+    // passwordRef.current?.setSelectionRange(0,3)
+    window.navigator.clipboard.writeText(PassWord);
+  }, [PassWord]);
 
   useEffect(() => {
     passwordGenerator();

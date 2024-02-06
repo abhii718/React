@@ -25,6 +25,8 @@ function App() {
     // passwordRef.current?.setSelectionRange(0,3)
     window.navigator.clipboard.writeText(PassWord);
   }, [PassWord]);
+
+  
   useEffect(() => {
     passwordGenerator();
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
