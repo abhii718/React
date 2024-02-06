@@ -21,7 +21,9 @@ function App() {
   }, [length, numberAllowed, charAllowed]);
 
   const copyPassWordToClickboard = useCallback(() => {
-    window.navigator.clipboard.writeText(PassWord)
+    passwordRef.current?.select();
+    // passwordRef.current?.setSelectionRange(0,3)
+    window.navigator.clipboard.writeText(PassWord);
   }, [PassWord]);
   useEffect(() => {
     passwordGenerator();
@@ -29,8 +31,10 @@ function App() {
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-5 my-9 text-orange-500 bg-gray-800 text-center">
-        <h1 className="text-white- text-center">Password Generator</h1>
+      <div className=" w-full mt-12 justify-center h-[170px] max-w-md mx-auto shadow-md rounded-lg px-5 my-9 text-orange-500 bg-gray-800 text-center">
+        <h1 className=" pt-6 pb-4 mb-8px h-[20px]  my-9  text-xl ">
+          Password Generator
+        </h1>
         <div className="flex shadow rounded-lg overflow-hidden mb-4">
           <input
             type="text"
@@ -44,11 +48,11 @@ function App() {
             onClick={copyPassWordToClickboard}
             className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
           >
-            copy
+            Copy
           </button>
         </div>
-        <div className="flex text-sm gap-x-2">
-          <div className="flex items-center gap-x-1">
+        <div className="flex text-sm gap-x-4 ">
+          <div className="flex items-center gap-x-2">
             <input
               type="range"
               min={6}
