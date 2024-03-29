@@ -11,7 +11,7 @@ function App() {
       <h1>React is Important</h1>
       <Login />
       <Profile />
-    </UserContextProvider>
+    </UserContextProvider >
   );
 }
 

@@ -6,6 +6,8 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [PassWord, setPassword] = useState("");
   const passwordRef = useRef(null);
+
+
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwzyz";
@@ -22,7 +24,6 @@ function App() {
 
   const copyPassWordToClickboard = useCallback(() => {
     passwordRef.current?.select();
-    // passwordRef.current?.setSelectionRange(0,3)
     window.navigator.clipboard.writeText(PassWord);
   }, [PassWord]);
 

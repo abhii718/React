@@ -1,5 +1,4 @@
 import { createContext, useContext } from "react";
-import UserConstext from "../../../08miniContext/src/context/UserContext";
 
 export const ThemeContext = createContext({
   themeMode: "light",
