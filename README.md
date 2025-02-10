@@ -544,6 +544,4 @@ export default App;
 
 This overview covers the essential React hooks—from core hooks like `useState` and `useEffect`, through advanced hooks such as `useReducer`, `useRef`, and `useMemo`, to the innovative new hooks in React 19 including `useActionState`, `useFormStatus`, `useOptimistic`, and the `use()` API. Mastering these hooks will provide you with a strong foundation for building dynamic, efficient, and maintainable frontend applications.
 
-Happy coding and best of luck on your journey to becoming a proficient React frontend developer!
-
 ---
